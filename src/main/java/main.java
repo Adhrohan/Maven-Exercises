@@ -12,11 +12,13 @@ public class main {
         System.out.println("Enter something: ");
         Scanner scanner = new Scanner(System.in);
         String userInput = scanner.nextLine();
+        boolean isNumber = StringUtils.isNumeric(userInput);
         if (StringUtils.isEmpty(userInput)){
             System.out.println("You didn't enter anything.");
         }else {
             System.out.println("You entered: " + userInput);
         }
+        System.out.println(isNumber);
         //flips the case of user input.
         System.out.println(StringUtils.swapCase(userInput));
 
